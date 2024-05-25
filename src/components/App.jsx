@@ -4,14 +4,14 @@ import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
 import { Notification } from './Notification/Notification';
 
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
-const PageStyle = styled.div`
-  height: 100vh;
-  padding: 40px;
-  font-size: 30px;
-  color: #010101;
-`;
+// const PageStyle = styled.div`
+//   height: 100vh;
+//   padding: 40px;
+//   font-size: 30px;
+//   color: #010101;
+// `;
 
 export class App extends Component {
   state = {
@@ -43,7 +43,7 @@ export class App extends Component {
     const positivePercentage = this.positivePercentage();
 
     return (
-      <PageStyle>
+      <div>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
@@ -61,7 +61,7 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </PageStyle>
+      </div>
     );
   }
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { BlockOfButtons } from './FeedbackOptions.sytled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <BlockOfButtons>
       {options.map(option => (
         <button
           key={option}
@@ -13,7 +14,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           {option.charAt(0).toUpperCase() + option.slice(1)}
         </button>
       ))}
-    </div>
+    </BlockOfButtons>
   );
 };
 
