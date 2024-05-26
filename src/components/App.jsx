@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
-import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
-import { Statistics } from './Statistics/Statistics';
-import { Section } from './Section/Section';
-import { Notification } from './Notification/Notification';
-
-// import styled from 'styled-components';
-
-// const PageStyle = styled.div`
-//   height: 100vh;
-//   padding: 40px;
-//   font-size: 30px;
-//   color: #010101;
-// `;
+import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
+import { Statistics } from 'components/Statistics/Statistics';
+import { Section } from 'components/Section/Section';
 
 export class App extends Component {
   state = {
@@ -49,17 +39,13 @@ export class App extends Component {
             options={['good', 'neutral', 'bad']}
             onLeaveFeedback={this.handleIncrement}
           />
-          {total > 0 ? (
-            <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={total}
-              positivePercentage={positivePercentage}
-            />
-          ) : (
-            <Notification message="There is no feedback" />
-          )}
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={total}
+            positivePercentage={positivePercentage}
+          />
         </Section>
       </div>
     );
