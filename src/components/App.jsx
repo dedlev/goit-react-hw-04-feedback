@@ -7,7 +7,7 @@ import { Notification } from './Notification/Notification';
 
 export class App extends Component {
   state = {
-    good: 0,
+    good: 1,
     neutral: 0,
     bad: 0,
   };
