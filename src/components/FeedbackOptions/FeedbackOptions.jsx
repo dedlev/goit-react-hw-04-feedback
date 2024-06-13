@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { BlockOfButtons } from './FeedbackOptions.sytled';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -8,6 +8,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       {options.map(option => (
         <button
           key={option}
+          name={option}
           type="button"
           onClick={() => onLeaveFeedback(option)}
         >
